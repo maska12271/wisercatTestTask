@@ -48,22 +48,18 @@ export class AppComponent implements OnInit{
 
     this.myForm.get('name')?.valueChanges.subscribe(() => {
       this.nameChanged = true;
-      console.log("vksjeb")
-    });
+   });
 
     this.myForm.get('surname')?.valueChanges.subscribe(() => {
       this.surnameChanged = true;
-      console.log("vksjeb")
     });
 
     this.myForm.get('email')?.valueChanges.subscribe(() => {
       this.emailChanged = true;
-      console.log("vksjeb")
     });
 
     this.myForm.get('workingExperience')?.valueChanges.subscribe(() => {
       this.workingExperienceChanged = true;
-      console.log("vksjeb")
     });
   }
 

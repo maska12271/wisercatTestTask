@@ -36,6 +36,7 @@ form{
 
 .formErrorInput{
   border: 1px solid var(--color-error);
+  color: var(--color-error);
   border-radius: 5px;
   transition: all 500ms;
   padding: 10px;
@@ -43,9 +44,16 @@ form{
   outline: none;
 }
 
+.hideErrorInput{
+  border: 1px solid var(--color-dark-border);
+  outline: none;
+  color: #000;
+}
+
 .fieldLabel{
   font-size: 17px;
   margin-bottom: 3px;
+  text-shadow: 0 2px 5px #a1a1a1;
 }
 
 .divForMessage{
@@ -77,13 +85,18 @@ form{
   width: 100%;
   margin-bottom: 20px;
   text-align: center;
+  text-shadow: 0 2px 5px #a1a1a1;
 }
 
 .error-message{
   font-size: 16px;
   transition: all 500ms;
   color: #e53935;
-  animation: fadeIn 0.5s ease-in-out forwards;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.hideErrorMessage{
+  animation: fadeOut 0.5s ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -97,7 +110,27 @@ form{
   }
 }
 
-.divToCloseSpace{
-  height: 48px;
-  margin-bottom: 30px;
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    filter: blur(0);
+  }
+  to {
+    opacity: 0;
+    filter: blur(5px);
+  }
+}
+
+@media screen and (min-width: 901px) {
+  .divToCloseSpace {
+    height: 48px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 900px)  {
+  .divToCloseSpace{
+    height: 40px;
+    margin: 20px 0;
+  }
 }

@@ -9,7 +9,7 @@
     <div class="formField">
       <label class="fieldLabel" for="name">Name</label>
       <input
-        [ngClass]="{'formErrorInput': submitted && myForm.controls['name'].invalid && !nameChanged, 'formInput': !submitted || !myForm.controls['name'].invalid}"
+        [ngClass]="{'formErrorInput': submitted && myForm.controls['name'].invalid && !nameChanged, 'formInput': !submitted || !myForm.controls['name'].invalid || nameChanged}"
         type="text"
         id="name"
         formControlName="name"
@@ -28,7 +28,7 @@
     <div class="formField">
       <label class="fieldLabel" for="surname">Surname</label>
       <input
-        [ngClass]="{'formErrorInput': submitted && myForm.controls['surname'].invalid && !surnameChanged, 'formInput': !submitted || !myForm.controls['surname'].invalid}"
+        [ngClass]="{'formErrorInput': submitted && myForm.controls['surname'].invalid && !surnameChanged, 'formInput': !submitted || !myForm.controls['surname'].invalid || surnameChanged}"
         type="text"
         id="surname"
         formControlName="surname"
@@ -47,7 +47,7 @@
     <div class="formField">
       <label class="fieldLabel" for="email">Email</label>
       <input
-        [ngClass]="{'formErrorInput': submitted && myForm.controls['email'].invalid && !emailChanged, 'formInput': !submitted || !myForm.controls['email'].invalid}"
+        [ngClass]="{'formErrorInput': submitted && myForm.controls['email'].invalid && !emailChanged, 'formInput': !submitted || !myForm.controls['email'].invalid || emailChanged}"
         type="email"
         id="email"
         formControlName="email"
@@ -69,7 +69,7 @@
     <div class="formField">
       <label class="fieldLabel" for="workingExperience">Working Experience (months)</label>
       <input
-        [ngClass]="{'formErrorInput': submitted && myForm.controls['workingExperience'].invalid && !workingExperienceChanged, 'formInput': !submitted || !myForm.controls['workingExperience'].invalid}"
+        [ngClass]="{'formErrorInput': submitted && myForm.controls['workingExperience'].invalid && !workingExperienceChanged, 'formInput': !submitted || !myForm.controls['workingExperience'].invalid || workingExperienceChanged}"
         type="text"
         id="workingExperience"
         formControlName="workingExperience"
